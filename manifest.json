@@ -1,6 +1,6 @@
 {
   "name": "TestDummy",
-  "description": "Autofill signup forms with test accounts. Manage profiles, export/import settings, customize domains. Shortcut: Alt+Shift+F.",
+  "description": "Fill signup forms with test accounts or any form with fake data (Smart Fill). Profiles, export/import settings, domains. Alt+Shift+F",
   "version": "0.2.0",
   "manifest_version": 3,
   "action": {
