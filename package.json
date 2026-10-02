@@ -1,7 +1,7 @@
 {
-  "name": "testdummy-chrome-extension",
-  "version": "1.0.0",
-  "description": "TestDummy - Chrome extension to autofill signup forms with test accounts. Features: profile management, export/import settings, domain customization, keyboard shortcuts (Alt+Shift+F)",
+  "name": "testdummy",
+  "version": "0.1.0",
+  "description": "Chrome extension that fills forms with test data on local and staging sites",
   "main": "background.js",
   "scripts": {
     "build": "webpack --mode=production",
@@ -16,7 +16,7 @@
     "javascript",
     "web-extension"
   ],
-  "author": "Your Name",
+  "author": "Corey Haines",
   "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.23.0",
@@ -39,5 +39,14 @@
   },
   "browserslist": [
     "last 2 Chrome versions"
-  ]
+  ],
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/coreyhaines31/testdummy.git"
+  },
+  "homepage": "https://github.com/coreyhaines31/testdummy",
+  "bugs": {
+    "url": "https://github.com/coreyhaines31/testdummy/issues"
+  }
 }
