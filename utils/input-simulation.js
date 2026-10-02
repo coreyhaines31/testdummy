@@ -311,7 +311,7 @@ class InputSimulator {
     // Validate input element
     isValidInput(element) {
         if (!element) return false;
-        if (element.tagName.toLowerCase() !== 'input') return false;
+        if (!['input', 'textarea'].includes(element.tagName.toLowerCase())) return false;
         if (element.disabled) return false;
         if (element.readOnly && element.type !== 'password') return false;
         return true;
