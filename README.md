@@ -2,6 +2,8 @@
 
 A Chrome extension that fills forms with test data on local and staging sites. Press **Alt+Shift+F** and the signup form is done.
 
+![TestDummy filling a signup form, then a company profile form with Smart Fill](docs/demo.gif)
+
 Every signup gets a fresh email (`test+1@example.com`, `test+2@example.com`, …), so you never hit "email already taken" while testing.
 
 ## Features
@@ -68,7 +70,7 @@ Scripts are injected on demand using the `activeTab` permission, so the extensio
 
 ## Contributing
 
-Issues and pull requests are welcome. Please run `npm test` and `npm run lint` before opening a PR.
+Issues and pull requests are welcome. See [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## License
 
