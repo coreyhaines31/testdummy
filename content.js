@@ -668,8 +668,7 @@ async function handleSmartFill(options, sendResponse) {
                     if (value) {
                         // Use InputSimulator if available, otherwise direct fill
                         if (typeof InputSimulator !== 'undefined' && inputSimulator) {
-                            const result = await inputSimulator.simulateInput(element, value);
-                            fillSuccess = result.success;
+                            fillSuccess = await inputSimulator.simulateInput(element, value);
                         } else {
                             // Fallback: direct value set with events
                             element.focus();
