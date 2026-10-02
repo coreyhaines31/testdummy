@@ -21,8 +21,7 @@ npm run package  # Create zip file for distribution
 ### Extension Components
 - **background.js**: Service worker handling commands, storage initialization, and extension lifecycle
 - **content.js**: Injected into web pages to detect and fill forms (includes wait-and-retry pattern for dynamic forms)
-- **popup.js/html**: Extension popup interface for manual triggering and settings
-- **popup-fixed.html**: Updated popup interface (currently set as default in manifest)
+- **popup-fixed.html/js**: Extension popup (Signup and Smart Fill modes)
 - **options.js/html**: Settings page for managing profiles and preferences
 
 ### Utility Modules (utils/)
@@ -32,7 +31,7 @@ npm run package  # Create zip file for distribution
 - **email-generator.js**: Creates unique test emails with versioning
 
 ### Build Configuration
-- **webpack.config.js**: Bundles entry points (background, content, popup) with Babel transpilation
+- **webpack.config.js**: Bundles entry points (background, content) with Babel transpilation
 - Output directory: `dist/`
 - Copies static assets (manifest.json, HTML, CSS) via CopyPlugin
 
@@ -61,7 +60,6 @@ The extension can be tested by:
 - **Host Permissions**: Now includes all HTTPS sites (`https://*/*`) in addition to localhost
 - **Content Scripts**: Auto-inject with all utility modules loaded in sequence:
   - storage-manager.js, email-generator.js, field-detection.js, input-simulation.js, then content.js
-- **Default Popup**: Currently using `popup-fixed.html` instead of `popup.html`
 
 ## Chrome Web Store Submission Checklist
 
@@ -73,9 +71,9 @@ The extension can be tested by:
    ```
 
 2. **Verify dist/ folder contains:**
-   - All JavaScript files (background.js, content.js, popup.js, options.js, popup-fixed.js)
-   - All HTML files (popup.html, popup-fixed.html, options.html)
-   - All CSS files (popup.css, options.css) - **Important**: options.css was missing before
+   - All JavaScript files (background.js, content.js, options.js, popup-fixed.js)
+   - All HTML files (popup-fixed.html, options.html)
+   - All CSS files (options.css) - **Important**: options.css was missing before
    - All icon files (16x16, 48x48, 128x128 PNG and SVG)
    - All utils/ files (storage-manager.js, email-generator.js, field-detection.js, input-simulation.js)
    - manifest.json
