@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TestDummy - Autofill Test Accounts</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>TestDummy</h1>
+            <p>Autofill test accounts for dev & staging</p>
+        </div>
+        
+        <div class="content">
+            <!-- Main Action Section -->
+            <div class="section main-action">
+                <button id="autofillBtn" class="btn btn-primary btn-large">
+                    <span class="btn-icon">🚀</span>
+                    Autofill Now
+                </button>
+                <p class="help-text">Press Alt+Shift+F or click to fill forms</p>
+            </div>
+            
+            <!-- Current Profile Info -->
+            <div class="section profile-info" id="profileInfo" style="display: none;">
+                <h3>Current Profile</h3>
+                <div class="profile-card">
+                    <div class="profile-avatar">👤</div>
+                    <div class="profile-details">
+                        <div class="profile-name" id="profileName">Loading...</div>
+                        <div class="profile-email" id="profileEmail">Loading...</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Quick Stats -->
+            <div class="section stats">
+                <h3>Quick Stats</h3>
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-value" id="fieldsFound">-</div>
+                        <div class="stat-label">Fields Found</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value" id="lastFill">-</div>
+                        <div class="stat-label">Last Fill</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Status Section -->
+            <div class="section">
+                <h3>Status</h3>
+                <div id="status" class="status">Ready</div>
+                <div id="domainStatus" class="domain-status">Checking domain...</div>
+            </div>
+            
+            <!-- Quick Actions -->
+            <div class="section quick-actions">
+                <h3>Quick Actions</h3>
+                <div class="action-buttons">
+                    <button id="openOptions" class="btn btn-outline btn-sm">⚙️ Settings</button>
+                    <button id="refreshPage" class="btn btn-outline btn-sm">🔄 Refresh</button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Footer -->
+        <div class="footer">
+            <div class="footer-links">
+                <a href="#" id="helpLink">Help</a>
+                <span class="separator">•</span>
+                <a href="#" id="feedbackLink">Feedback</a>
+            </div>
+            <div class="version">v0.1.0</div>
+        </div>
+    </div>
+    
+    <script src="popup.js"></script>
+</body>
+</html>

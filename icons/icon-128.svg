@@ -1,0 +1,18 @@
+<svg width="128" height="128" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Form background -->
+  <rect x="20" y="16" width="88" height="96" rx="8" fill="#2d3748" stroke="#4a5568" stroke-width="2"/>
+
+  <!-- Form lines (empty fields) -->
+  <rect x="32" y="32" width="32" height="4" rx="2" fill="#a0aec0"/>
+  <rect x="32" y="42" width="48" height="4" rx="2" fill="#a0aec0"/>
+  <rect x="32" y="52" width="40" height="4" rx="2" fill="#a0aec0"/>
+  <rect x="32" y="62" width="44" height="4" rx="2" fill="#a0aec0"/>
+
+  <!-- Filled lines (completed fields) -->
+  <rect x="32" y="76" width="32" height="4" rx="2" fill="#ffffff"/>
+  <rect x="32" y="86" width="48" height="4" rx="2" fill="#ffffff"/>
+  <rect x="32" y="96" width="40" height="4" rx="2" fill="#ffffff"/>
+
+  <!-- Large checkmark -->
+  <path d="M80 68 L88 76 L104 60" stroke="#ffffff" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

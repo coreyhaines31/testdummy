@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TestDummy Settings</title>
+    <link rel="stylesheet" href="options.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>TestDummy Settings</h1>
+            <p>Configure your test account profiles and domain allowlist</p>
+        </header>
+
+        <div class="tabs">
+            <button class="tab-button active" data-tab="profiles">Profiles</button>
+            <button class="tab-button" data-tab="domains">Domains</button>
+            <button class="tab-button" data-tab="settings">Settings</button>
+        </div>
+
+        <!-- Profiles Tab -->
+        <div class="tab-content active" id="profiles-tab">
+            <div class="section">
+                <div class="section-header">
+                    <h2>Test Account Profiles</h2>
+                    <button id="addProfile" class="btn btn-primary">+ Add Profile</button>
+                </div>
+                
+                <div id="profilesList" class="profiles-list">
+                    <!-- Profiles will be dynamically loaded here -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Domains Tab -->
+        <div class="tab-content" id="domains-tab">
+            <div class="section">
+                <h2>Allowed Domains</h2>
+                <p class="help-text">TestDummy will only run on these domains for security</p>
+                
+                <div class="domain-input-group">
+                    <input type="text" id="newDomain" placeholder="e.g., localhost:3000, staging.myapp.com" class="domain-input">
+                    <button id="addDomain" class="btn btn-secondary">Add Domain</button>
+                </div>
+                
+                <div id="domainsList" class="domains-list">
+                    <!-- Domains will be dynamically loaded here -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Settings Tab -->
+        <div class="tab-content" id="settings-tab">
+            <div class="section">
+                <h2>General Settings</h2>
+                
+                <div class="setting-group">
+                    <label for="defaultProfile">Default Profile</label>
+                    <select id="defaultProfile" class="setting-select">
+                        <option value="">Select a profile...</option>
+                    </select>
+                </div>
+                
+                <div class="setting-group">
+                    <label for="emailStrategy">Email Generation Strategy</label>
+                    <select id="emailStrategy" class="setting-select">
+                        <option value="counter">Counter (test+1, test+2, ...)</option>
+                        <option value="timestamp">Timestamp (test+1703123456)</option>
+                    </select>
+                </div>
+                
+                <div class="setting-group">
+                    <label for="autoSubmit">
+                        <input type="checkbox" id="autoSubmit">
+                        Auto-submit form after filling
+                    </label>
+                </div>
+                
+                <div class="setting-group">
+                    <label for="debugMode">
+                        <input type="checkbox" id="debugMode">
+                        Enable debug logging
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <!-- Profile Modal -->
+        <div id="profileModal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 id="modalTitle">Add Profile</h3>
+                    <button class="close-btn" id="closeModal">&times;</button>
+                </div>
+                
+                <form id="profileForm" class="profile-form">
+                    <div class="form-group">
+                        <label for="profileName">Profile Name</label>
+                        <input type="text" id="profileName" required placeholder="e.g., Test User">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="firstName">First Name</label>
+                        <input type="text" id="firstName" required placeholder="e.g., Test">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="lastName">Last Name</label>
+                        <input type="text" id="lastName" required placeholder="e.g., User">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="emailPrefix">Email Prefix</label>
+                        <input type="text" id="emailPrefix" required placeholder="e.g., test">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="emailDomain">Email Domain</label>
+                        <input type="text" id="emailDomain" required placeholder="e.g., gmail.com">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="text" id="password" required placeholder="e.g., TestPass123!">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="fieldMappings">Custom Field Mappings (JSON)</label>
+                        <textarea id="fieldMappings" placeholder='{"email": "input[name=\"user_email\"]", "name": "input[name=\"full_name\"]"}'></textarea>
+                        <small>Optional: Override default field detection with custom selectors</small>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="button" id="cancelProfile" class="btn btn-secondary">Cancel</button>
+                        <button type="submit" class="btn btn-primary">Save Profile</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="footer">
+            <button id="exportSettings" class="btn btn-outline">Export Settings</button>
+            <button id="importSettings" class="btn btn-outline">Import Settings</button>
+            <button id="resetSettings" class="btn btn-danger">Reset All Settings</button>
+        </div>
+    </div>
+
+    <script src="utils/storage-manager.js"></script>
+    <script src="options.js"></script>
+</body>
+</html>
