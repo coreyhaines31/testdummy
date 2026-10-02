@@ -68,7 +68,7 @@ Scripts are injected on demand using the `activeTab` permission, so the extensio
 
 ## Contributing
 
-Issues and pull requests are welcome. Please run `npm test` and `npm run lint` before opening a PR.
+Issues and pull requests are welcome. See [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## License
 
