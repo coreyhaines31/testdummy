@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TestDummy - Chrome Extension</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .header h1 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        .header p {
+            color: #7f8c8d;
+            font-size: 1.1em;
+        }
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 40px 0;
+        }
+        .feature {
+            padding: 20px;
+            border-radius: 8px;
+            background: #f8f9fa;
+            border-left: 4px solid #3498db;
+        }
+        .feature h3 {
+            margin-top: 0;
+            color: #2c3e50;
+        }
+        .links {
+            text-align: center;
+            margin: 40px 0;
+        }
+        .links a {
+            display: inline-block;
+            margin: 10px;
+            padding: 12px 24px;
+            background: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: background 0.3s;
+        }
+        .links a:hover {
+            background: #2980b9;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 60px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            color: #7f8c8d;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>TestDummy</h1>
+        <p>Chrome Extension for Automated Test Form Filling</p>
+    </div>
+
+    <div class="content">
+        <p>TestDummy is a Chrome extension designed to automatically fill signup forms with test accounts for local and staging environments. Perfect for developers who need to quickly test user flows without manually entering form data every time.</p>
+
+        <div class="features">
+            <div class="feature">
+                <h3>🚀 Quick Setup</h3>
+                <p>Easy one-time setup with customizable test profiles for different scenarios.</p>
+            </div>
+            <div class="feature">
+                <h3>⌨️ Keyboard Shortcuts</h3>
+                <p>Use Alt+Shift+F to instantly fill forms without clicking through menus.</p>
+            </div>
+            <div class="feature">
+                <h3>🎯 Smart Detection</h3>
+                <p>Automatically detects form fields and fills them with appropriate test data.</p>
+            </div>
+            <div class="feature">
+                <h3>📧 Email Versioning</h3>
+                <p>Generates unique test emails to avoid conflicts during testing.</p>
+            </div>
+            <div class="feature">
+                <h3>🔒 Privacy First</h3>
+                <p>All data stays local - no external servers, no tracking, no data collection.</p>
+            </div>
+            <div class="feature">
+                <h3>🌐 Local & Staging</h3>
+                <p>Works on localhost and staging environments for comprehensive testing.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="links">
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="https://github.com/coreyhaines/testdummy">View on GitHub</a>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2024 TestDummy. All rights reserved.</p>
+    </div>
+</body>
+</html>
