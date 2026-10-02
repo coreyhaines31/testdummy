@@ -45,6 +45,16 @@ describe('InputSimulator', () => {
             expect(onChange).toHaveBeenCalled();
         });
 
+        it('fills a textarea', async () => {
+            document.body.innerHTML = '<textarea id="bio"></textarea>';
+            const textarea = document.getElementById('bio');
+
+            const result = await simulator.simulateInput(textarea, 'About us');
+
+            expect(result).toBe(true);
+            expect(textarea.value).toBe('About us');
+        });
+
         it('returns false for a missing element', async () => {
             expect(await simulator.simulateInput(null, 'value')).toBe(false);
         });
